@@ -1,0 +1,504 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #344b70;
+}
+
+
+/* =========================
+   DEPENDENTS PAGE
+========================= */
+
+.profile-page {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 30px 50px;
+}
+
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.page-heading {
+    margin-bottom: 30px;
+}
+
+.page-heading h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: #344b70;
+}
+
+.page-heading p {
+    margin: 8px 0 0;
+    font-size: 15px;
+    color: #8496b3;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-section {
+    width: 650px;
+    max-width: 100%;
+    margin: 0 auto 35px;
+}
+
+.progress-line {
+    height: 4px;
+    background-color: #dce1e7;
+    position: relative;
+    margin: 0 60px;
+}
+
+.progress-filled {
+    position: absolute;
+    height: 4px;
+    background-color: #344b70;
+    top: 0;
+    left: 0;
+}
+
+.progress-filled.step-one {
+    width: 0%;
+}
+
+.progress-filled.step-two {
+    width: 50%;
+}
+
+.progress-filled.step-three {
+    width: 100%;
+}
+
+.progress-circle {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid #dce1e7;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-circle.active {
+    background-color: #344b70;
+    border-color: #344b70;
+}
+
+.progress-circle:first-of-type {
+    left: 0;
+}
+
+.progress-circle.second {
+    left: 50%;
+}
+
+.progress-circle.third {
+    left: 100%;
+}
+
+
+/* =========================
+   STEP LABELS
+========================= */
+
+.step-labels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #c5ccd7;
+    line-height: 1.4;
+}
+
+.step-labels .current {
+    color: #344b70;
+    font-weight: 600;
+}
+
+
+/* =========================
+   MAIN WHITE CARD
+========================= */
+
+.main-card {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 16px;
+    padding: 32px 38px;
+    box-shadow: 0 8px 25px rgba(52, 75, 112, 0.08);
+}
+
+
+/* =========================
+   STEP HEADINGS
+========================= */
+
+.registration-step h2,
+.health-step h2 {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0 0 10px;
+    color: #344b70;
+}
+
+.description {
+    text-align: center;
+    color: #8496b3;
+    font-size: 15px;
+    margin: 0 0 30px;
+}
+
+
+/* =========================
+   TWO COLUMNS
+========================= */
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #344b70;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    border: 1px solid #d5dce6;
+    border-radius: 9px;
+    height: 46px;
+    padding: 0 13px;
+    font-size: 14px;
+    color: #344b70;
+    background-color: white;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #a9b5c8;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #344b70;
+}
+
+
+/* =========================
+   BIRTH DATE
+========================= */
+
+.birth-group {
+    margin-bottom: 25px;
+}
+
+.birth-inputs {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.8fr;
+    gap: 15px;
+}
+
+.birth-inputs select {
+    appearance: auto;
+}
+
+
+/* =========================
+   HEALTH STEP
+========================= */
+
+.health-form {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.health-form .input-group {
+    margin-bottom: 22px;
+}
+
+.input-group textarea {
+    height: 110px;
+    padding-top: 12px;
+    resize: vertical;
+}
+
+
+/* =========================
+   PLAN STEP
+========================= */
+
+.plan-step {
+    padding: 0;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+
+.plan-card {
+    min-height: 320px;
+    border-radius: 16px;
+    padding: 28px 24px;
+    background-color: white;
+    border: 1px solid #dce1e7;
+    box-shadow: 0 8px 20px rgba(52, 75, 112, 0.08);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    border-color: #dce1e7;
+    box-shadow: 0 12px 25px rgba(214, 0, 159, 0.18);
+}
+
+
+/* =========================
+   PLAN CONTENT
+========================= */
+
+.plan-line {
+    height: 1px;
+    background-color: #e5e8ed;
+    margin: 18px 0 20px;
+}
+
+.detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.detail span {
+    color: #d6009f;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.detail p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #344b70;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.next-container {
+    justify-content: flex-end;
+}
+
+.back-button,
+.next-button,
+.send-button {
+    border: none;
+    height: 44px;
+    padding: 0 27px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back-button {
+    background-color: #e3e9f0;
+    color: #344b70;
+    box-shadow: 0 4px 10px rgba(52, 75, 112, 0.08);
+}
+
+.next-button {
+    background-color: #344b70;
+    color: white;
+}
+
+.send-button {
+    background-color: #30345d;
+    color: white;
+}
+
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.back-button:hover,
+.next-button:hover,
+.send-button:hover {
+    background-color: #b000c7;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(176, 0, 199, 0.25);
+}
+
+.back-button:active,
+.next-button:active,
+.send-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .profile-page {
+        width: 100%;
+        max-width: 750px;
+        padding: 30px 20px 40px;
+    }
+
+    .page-heading h1 {
+        font-size: 28px;
+    }
+
+    .page-heading p {
+        font-size: 15px;
+    }
+
+    .main-card {
+        width: 100%;
+        padding: 28px;
+    }
+
+    .plans {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-card {
+        min-height: auto;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .profile-page {
+        width: 100%;
+        padding: 25px 12px 30px;
+    }
+
+    .page-heading {
+        margin-bottom: 25px;
+    }
+
+    .page-heading h1 {
+        font-size: 25px;
+    }
+
+    .page-heading p {
+        font-size: 14px;
+    }
+
+    .progress-section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .progress-line {
+        margin: 0 35px;
+    }
+
+    .step-labels {
+        font-size: 11px;
+    }
+
+    .main-card {
+        width: 100%;
+        padding: 22px 18px;
+        border-radius: 14px;
+    }
+
+    .registration-step h2,
+    .health-step h2 {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 22px;
+    }
+
+    .birth-inputs {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .button-container {
+        margin-top: 20px;
+    }
+
+    .back-button,
+    .next-button,
+    .send-button {
+        padding: 0 22px;
+    }
+
+    .plan-card {
+        padding: 25px 22px;
+    }
+}
