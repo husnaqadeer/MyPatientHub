@@ -31,6 +31,7 @@ body {
 }
 
 .page-heading h1 {
+    text-align: center;
     margin: 0;
     font-size: 30px;
     font-weight: 600;
@@ -38,6 +39,7 @@ body {
 }
 
 .page-heading p {
+    text-align: center;
     margin: 8px 0 0;
     font-size: 15px;
     color: #8496b3;
